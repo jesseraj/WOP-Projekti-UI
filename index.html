@@ -1,30 +1,194 @@
 <!DOCTYPE html>
-<html>
 
+<html lang="en">
     <head>
-        <meta charset="utf8">
-        <title>Tietämättömät</title>
+        <title>Tietämättömätv2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <link href="./css/main.css" rel="stylesheet">
+		
     </head>
 
     <body>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Etusivu</a></li>
-                </ul>
-            </nav>
-            
-            <h1>MeemugalleriaV4</h1>
-            <p>Tämä toimii kai</p>
-            <img src="http://placekitten.com/200/300" alt="Kissa">
-            <ul id="list">
-                <!-- js creates list here -->
 
-            </ul>
+
+        <div class="container-fluid">
+
+            <header class="header">
+                <nav class="navbar">
+                    <a href="index.html" class="nav-logo">Tietämättömätv2</a>
+
+                    <ul class="nav-menu">
+
+                        <!-- Web napit -->
+                        <li class="nav-item">
+                            <button id="myBtn">Upload a MEME</button>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Etusivu</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/viestit" class="nav-link">Viestit</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/profiili" class="nav-link">Profiili</a>
+                        </li>
+
+
+                        <!-- Mobiilinapit --> 
+                        <li class="mobile-nav-item">
+                            <a href="#page1" class="nav-link">Viestit</a>
+                        </li>
+
+                        <li class="mobile-nav-item">
+                            <a href="#page2" class="nav-link">Etusivu</a>
+                        </li>
+
+                        <li class="mobile-nav-item">
+                            <a href="#page3" class="nav-link">Profiili</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href='Loginpage.html'class="loginpagee">LOGIN</a>
+                        </li>
+
+                    </ul>
+
+                    <div id="Modali" class="modal">
+
+                        <!-- Modalim  sisältö -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>
+                                Anna meemillesi otsikko <br>
+                                <input type="text"> <br>
+                                    
+                                Valitse Tiedosto<br>
+                                <input type="file">
+                
+                            </p>
+                        </div>  
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+
+
+                <!-- Slides -->
+                <div class="rivi">
+
+                    <!-- Sivu 1 -->
+                    <div class="slide one" id="page1">
+
+                        <h1>Tähän tulee viestit tms.</h1>
+
+                        <ul class="viestikenttä">Tämä on viestikenttä
+                            <li class="viesti">Viesti1</li>
+                            <li class="viesti">Viesti2</li>
+                            <li class="viesti">Viesti3</li>
+                            
+                        </ul>
+
+
+                    </div>
+                    
+                    <!-- Sivu 2 -->
+                    <div class="slide two" id="page2">
+                        
+                        <h1>MeemugalleriaV4</h1>
+                        <ul id="list">
+                            <!-- js creates list here -->
+            
+                        </ul>
+
+
+                        <div class="postaus">
+                            <h2>Kuvaotsikko (kuva 16:9)</h2>
+                            <img class="meemi" src="http://placekitten.com/1280/720" alt="Meemi">
+
+                            
+                            <!-- Tähän joku kommentointikenttä tms. -->
+                            
+                            <ul class="Napit">
+                                <button id="Tykkää">Tykkää</button>
+                                <button id="Kommentoi">Kommentoi</button>
+                                <button>Jaa?</button>
+                            </ul>
+
+                        </div>
+
+                        <div class="postaus">
+                            <h2>Kuvaotsikko (kuva 1:1)</h2>
+                            <img class="meemi" src="http://placekitten.com/800/800" alt="Meemi">
+
+                            <ul class="Napit">
+                                <button id="Tykkää">Tykkää</button>
+                                <button id="Kommentoi">Kommentoi</button>
+                                <button>Jaa?</button>
+                            </ul>
+
+                        </div>
+                        
+                        <div class="postaus">
+                            <h2>Kuvaotsikko (kuva 4:3)</h2>
+                            <img class="meemi" src="http://placekitten.com/800/600" alt="Meemi">
+
+                            <ul class="Napit">
+                                <button id="Tykkää">Tykkää</button>
+                                <button id="Kommentoi">Kommentoi</button>
+                                <button>Jaa?</button>
+                            </ul>
+
+                        </div>
+        
+                    </div>
+                                            
+
+
+                    <!-- Sivu 3 -->
+                    <div class="slide three" id="page3">
+
+                        <h1>Tähän tulee profiili tms.</h1>
+                        <p><input type="file" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                        <p><label for="file" style="cursor: pointer; color: antiquewhite;">Päivitä profiilikuva</label></p>
+
+                        <section class="profilebio">
+
+                            <img id="profiilikuva" src="http://placekitten.com/200/200" alt="Profiilikuva">
+                            
+                            <p id="meemicount">Meemit:</p>
+                            <p id="tykkäyscount">Tykkäykset:</p>
+                        
+                        </section>
+
+                        <ul class="bio">
+                            <h4 id="bionimi">Erkki esimerkki</h4>
+                            <p id="bioteksti">Biotekstii joku neljä rivii tai jotai sellast, mitä tähä ny yleensä kirjotellaa
+                                varmaa jotai semi söpöö tai sit vaa meemil jotai lllaaaamaaaaaao!
+                            </p>
+                        </ul>
+
+                    </div>
+                </div>
+            </main>
         </div>
 
-        <script src="./js/main.js"></script>
     </body>
 
+    <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </html>
+      
+
+
+
+
+
+
+      
